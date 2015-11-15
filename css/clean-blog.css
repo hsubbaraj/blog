@@ -394,5 +394,13 @@ body {
   webkit-tap-highlight-color: #0085a1;
 }
 .navbar-brand {
-  font-size: 16px;
+  font-size: 15px;
+}
+#img_baby {
+  max-height: 300px;
+  max-width:  300px;
+}
+.poem {
+  font-style:italic;
+  margin-right: 80px;
 }
