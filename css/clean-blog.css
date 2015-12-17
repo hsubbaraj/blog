@@ -404,3 +404,8 @@ body {
   font-style:italic;
   margin-right: 80px;
 }
+.bday {
+  max-height: 640px;
+  max-width: 480px;
+}
+
