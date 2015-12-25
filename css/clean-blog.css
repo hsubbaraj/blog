@@ -408,4 +408,6 @@ body {
   max-height: 640px;
   max-width: 480px;
 }
-
+.urmi {
+  display: none;
+}
