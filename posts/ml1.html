@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CONGRATULATIONS</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">The Life and Lies of Hari Subbaraj</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('../img/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>NBA Project: Day 1</h1>
+                        <h2 class="subheading">Finally doing something worth writing about</h2>
+                        <span class="meta">Posted by <a href="#">Hari Subbaraj</a> on September 30, 2016</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p>Wow, it&rsquo;s been a very long time since I wrote on this blog. In fact, it&rsquo;s been so long that I even forgot that it existed and I only remembered because my roommate asked me about it. Oh yea, I&rsquo;m in college and I have a roommate (two in fact) now. Anyways, this post will be a little different than the others. I recently started to pursue an interest of my own outside the classroom, and I decided to document my progress here on this blog. It hopefully will be a nice way to record my process while also keeping me accountable and prevent me from slacking off. Plus it&rsquo;s kinda cool to write this shit down haha.</p>
+
+                    <p>OK, so let&rsquo;s talk about the project. For those of you who know me, I am a huge sports fan. Like HUGE fan. NFL, NBA, tennis, MLB, futbol, ice hockey, MMA, cricket, you name it, I have probably followed it. My two favorite leagues to follow are the NFL and NBA, with my favorite teams being the Patriots and the Warriors respectively (I am NOT a bandwagoner fight me if you think I am haha). I probably sound like a huge sports geek right now, but hear me out. </p>
+
+                    <p>Recently in my CS61A class, we completed a project called Maps, where we basically created the predicting algorithm that Yelp uses to recommend restaurants to its users. This &ldquo;predictor&rdquo; as I will call it uses something called a k-means algorithm and linear regression, both of which are machine learning techniques. Although we didn&rsquo;t actually do any machine learning, I found the process really interesting, and I decided to do some exploring on my own. If you want to learn more about the k-means algorithm, check it out here: </p>
+
+                    <p><a href = "https://sites.google.com/site/dataclusteringalgorithms/k-means-clustering-algorithm">k-means clustering</a></p>
+
+                    <p>The end goal of this project is to take some sort of NBA statistic and run machine learning algorithms on these statistics to learn something interesting. Now what statistics and what algorithms am I going to use? I&rsquo;m actually not sure, and I&rsquo;m not at the level right now to start thinking about that. But in order to get there, I&rsquo;ll be doing analyses on smaller, known data sets, which I&rsquo;ll be documenting here.</p>
+
+                    <p>The first step into doing this is to build a viable web scraper in order to take data from the heaven known as basketball-reference.com. So that was my goal for the last couple days: take some data and organize it in a reasonable manner to use in analysis later on. </p>
+
+                    <p>After googling web scraping techniques and libraries, I found something called BeautifulSoup, a Python library created at MIT. This library makes web scraping a lot more convenient by putting all the data into what&rsquo;s called a &ldquo;soup&rdquo; and then running functions on it to get resultant sets of web data that we can further narrow down. So I took this page: </p>
+
+                    <img class="bday" src="../img/webpage_scrap.png">
+
+                    <p> I wanted to grab each of the top 10 lists of all 50 statistics. Here is my code below:</p>
+
+                    <!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #8f5902; font-style: italic">------------------------------------------------FIRST PYTHON WEB SCRAPER------------------------------------------------</span>
+<span style="color: #8f5902; font-style: italic">I am taking data from the statistical leaders of the 2015-2016 NBA season from basketball-reference and inputting them </span>
+<span style="color: #8f5902; font-style: italic">into a Python dictionary. The structure of the data is as follows:</span>
+
+<span style="color: #8f5902; font-style: italic">LIST </span>
+<span style="color: #8f5902; font-style: italic">   TUPLE[0]: Name of Statistic </span>
+<span style="color: #8f5902; font-style: italic">   TUPLE[1]: LIST</span>
+<span style="color: #8f5902; font-style: italic">              0. LIST ([0]- Name of Player, [1]- Value) #1 Player</span>
+<span style="color: #8f5902; font-style: italic">              |</span>
+<span style="color: #8f5902; font-style: italic">              |</span>
+<span style="color: #8f5902; font-style: italic">              9. LIST ([0]- Name of Player, [1]- Value) #10 Player</span>
+<span style="color: #8f5902; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #204a87; font-weight: bold">import</span> <span style="color: #000000">urllib.request</span> <span style="color: #204a87; font-weight: bold">as</span> <span style="color: #000000">url</span>
+<span style="color: #204a87; font-weight: bold">import</span> <span style="color: #000000">pprint</span>
+<span style="color: #204a87; font-weight: bold">from</span> <span style="color: #000000">bs4</span> <span style="color: #204a87; font-weight: bold">import</span> <span style="color: #000000">BeautifulSoup</span>
+
+<span style="color: #8f5902; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #8f5902; font-style: italic">Libraries used:</span>
+<span style="color: #8f5902; font-style: italic">urllib.request - accessing website data</span>
+
+<span style="color: #8f5902; font-style: italic">BeautifulSoup - manipulate the web data</span>
+
+<span style="color: #8f5902; font-style: italic">PPrint - Printing dictionaries/lists in a nice format</span>
+<span style="color: #8f5902; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #000000">wiki2</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">&quot;http://www.basketball-reference.com/leagues/NBA_2016_leaders.html&quot;</span>  <span style="color: #8f5902; font-style: italic">#Accessing web page and converting to BS</span>
+<span style="color: #000000">page2</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">url</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">urlopen</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">wiki2</span><span style="color: #000000; font-weight: bold">)</span>
+<span style="color: #000000">soup2</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">BeautifulSoup</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">page2</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot;lxml&quot;</span><span style="color: #000000; font-weight: bold">)</span>
+<span style="color: #204a87; font-weight: bold">print</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">type</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">soup2</span><span style="color: #000000; font-weight: bold">))</span>                              <span style="color: #8f5902; font-style: italic">#Check that BS is working (converting to correct object type)</span>
+<span style="color: #000000">col</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">soup2</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">find_all</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">class_</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">&quot;columns&quot;</span><span style="color: #000000; font-weight: bold">)</span>         <span style="color: #8f5902; font-style: italic">#Create list of Stat Columns</span>
+
+<span style="color: #000000">each_col</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">element</span> <span style="color: #204a87; font-weight: bold">for</span> <span style="color: #000000">element</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #000000">col</span><span style="color: #000000; font-weight: bold">]</span>          <span style="color: #8f5902; font-style: italic">#Creating lists for length purposes</span>
+
+<span style="color: #000000">leaders</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[]</span>                                  <span style="color: #8f5902; font-style: italic">#Creating empty list</span>
+<span style="color: #204a87; font-weight: bold">for</span> <span style="color: #000000">j</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #204a87">range</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">len</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">each_col</span><span style="color: #000000; font-weight: bold">)):</span>
+
+    <span style="color: #000000">cat_leaders</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[]</span>                          <span style="color: #8f5902; font-style: italic">#Resetting each Top 10 list for every new Stat</span>
+    <span style="color: #000000">rows</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">col</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">j</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">find_all</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;tr&quot;</span><span style="color: #000000; font-weight: bold">)</span>                <span style="color: #8f5902; font-style: italic">#Creating list of each player in the Top 10</span>
+    <span style="color: #000000">name</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">col</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">j</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">find_all</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;caption&quot;</span><span style="color: #000000; font-weight: bold">)[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">get_text</span><span style="color: #000000; font-weight: bold">()</span> <span style="color: #8f5902; font-style: italic">#Finding the name of each stat (KEY OF EACH DICTIONARY)</span>
+
+    <span style="color: #000000">minutes</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">element</span> <span style="color: #204a87; font-weight: bold">for</span> <span style="color: #000000">element</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #000000">rows</span><span style="color: #000000; font-weight: bold">]</span>
+    <span style="color: #204a87; font-weight: bold">for</span> <span style="color: #000000">i</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #204a87">range</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">len</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">minutes</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">//</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">):</span>
+        <span style="color: #000000">cat_leaders</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">append</span><span style="color: #000000; font-weight: bold">([</span><span style="color: #000000">rows</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">find_all</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">class_</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">&quot;who&quot;</span><span style="color: #000000; font-weight: bold">)[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">find_all</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;a&quot;</span><span style="color: #000000; font-weight: bold">)[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">get_text</span><span style="color: #000000; font-weight: bold">(),</span> <span style="color: #000000">rows</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">find_all</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">class_</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">&quot;value&quot;</span><span style="color: #000000; font-weight: bold">)[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">get_text</span><span style="color: #000000; font-weight: bold">()])</span>
+        <span style="color: #8f5902; font-style: italic">#Append list of (name, value) for each player </span>
+    <span style="color: #000000">leaders</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">append</span><span style="color: #000000; font-weight: bold">((</span><span style="color: #000000">name</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">cat_leaders</span><span style="color: #000000; font-weight: bold">))</span>                 <span style="color: #8f5902; font-style: italic">#Create tuple for list entry</span>
+<span style="color: #000000">pprint</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">pprint</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">leaders</span><span style="color: #000000; font-weight: bold">)</span>                         <span style="color: #8f5902; font-style: italic">#Print dictionary</span>
+</pre></td></tr></table></div>
+
+
+                    <p> Since the code is pretty heavily commented, I&rsquo;ll just explain the logic behind the whole process. I first grabbed all the columns on the web page, where each column holds a top 10 list. The find_all function creates a list of Resultant Sets, so I have a set of 50 ResultantSet objects in the variable col. Next I create a list of tuples(immutable lists) called leaders. Tuple[0] will be the name of the Statistic, and Tuple[1] will be a list containing the top 10 players of that statistic. </p>
+
+                    <p>In the outer loop, I also set the list of rows in the col to rows. I also find the name of the statistic, which will become Tuple[0]. In the inner loop, I basically create a list that looks like [&ldquo;player name&rdquo;, Stat Value] for each player 1-10. This list that contains the 10 pairs is called cat_leaders and is reset every time I go to a new column/statistic. </p>
+
+                    <p>Finally, I append each name and list of lists into the tuple. This is what the final product looks like:</p>
+
+                    <img class="bday" src="../img/bash_result.png">
+
+                    <p> I also experimented with using a dictionary instead of a list, where the key would be the name of the statistic and the value would be the list. However, I realized that accessing the values(players) directly would violate the dictionary abstraction. (Dictionaries are meant to be accessed only by the keys but I wanted direct access to the values themselves)</p>
+
+                    <p>So now that I have this data in accessible form, what is the next step? I plan on finding how often players appear on this graph and plot that on some sort of graph. If that doesn&rsquo;t work, I&rsquo;ll figure something else out haha. Anyways thanks for reading if you made it to the end of this, and hope you liked the material </p>
+                    <blockquote>Quote of the Day:<br>I'd like to say to all my fans out there, thanks for the support. And to all my doubters, thanks very much because you have also pushed me -Usain Bolt</blockquote>
+                </div>
+            </div>
+        </div>
+    </article>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        // Required: on line below, replace text in quotes with your forum shortname
+        var disqus_shortname = 'FORUM SHORTNAME GOES HERE';
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    <hr>
+
+    <!-- Footer -->
+   <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/hsubbaraj">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/hari.subbaraj">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="www.github.com/hsubbaraj">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; hsubbaraj 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
